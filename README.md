@@ -25,17 +25,45 @@
 
 ## Tests
 
-Describe: pigLatin()
+Describe: inputGreaterThanZero()
 
+  Test: "It should check if user entered a whole number greater than zero"
+  Code: const input = 1123; 
+        inputGreaterThanZero(input);
+  Expected Output: true 
 
-<!-- Test: "It should return a word match regardless of punctuation."
-Code:
-pigLatin();
-Expected Output:  -->
+Describe: arrayZeroToInput()
 
+  Test: "It should return an array of numbers from 0 to the user's inputted number"
+  Code: arrayZeroToInput(5);
+  Expected Output: [0, 1, 2, 3, 4, 5]
 
+Describe: Beep!()
 
+  Test: "It should return an array that replaced any element of the input array that contains a 1 within it's digits with "Beep!""
+  Code: Beep!([0, 1, 12, 31, 8, 123]);
+  Expected Output: [0, Beep!, Beep!, Beep!, 8, Beep!]
 
+Describe: Boop!()
+
+  Test: "It should return an array that replaced any element of an array that contains a 2 within it's digits with "Boop!""
+  Code: Beep!([0, 1, 12, 31, 8, 123]);
+  Expected Output: [0, Boop!, 31, 8, Boop!]
+
+Describe: neighbor()
+
+  Test: "It should return an array that replaced any element of an array that contains a 3 within it's digits with "Won't you be my neighbor?""
+  Code: Beep!([0, 1, 12, 31, 8, 123]);
+  Expected Output: [0, 1, "Won't you be my neighbor?", 8, "Won't you be my neighbor?"]
+
+Describe: Mr._Roboger's_Neighborhood()
+
+  Test: It should return an array that replaced any element of an array with one of the following strings based on a hierarchy: 
+          1st - Elements with 3 it's digits are replaced "Won't you be my neighbor?"
+          2nd - Elements with 2 it's digits are replaced "Boop!"
+          3rd - Elements with 1 it's digits are replaced "Beep!"
+  Code: Mr._Roboger's_Neighborhood([0, 1, 12, 31, 8, 123]);
+  Expected Output: [0, Beep!, Boop!, Won't you be my neighbor, 8, Won't you be my neighbor]
 
 ## Setup/Installation Requirements
 
