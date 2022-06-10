@@ -13,17 +13,21 @@ function arrayZeroToInput(inputtedNumber) {
   return zeroToInputArray
 }
 
-function ElementIncludesNumber(CurrentElement, number) {
-  const numberArray = CurrentElement.split("")
-  for (const currentElement of numberArray) {
-    if (currentElement === number) {
+function ElementIncludesNumber(currentElement, number) {
+  const numberArray = currentElement.split("");
+  console.log(numberArray);
+  for (const Element of numberArray) {
+    console.log(Element);
+    if (Element === number) {
       return true
     }
   }
   return false
 }
 
+let test = ElementIncludesNumber("1jkl   23", "3");
 
+console.log(test);
 
 
 
