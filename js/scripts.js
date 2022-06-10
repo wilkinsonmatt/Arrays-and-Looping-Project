@@ -13,3 +13,18 @@ function arrayZeroToInput(inputtedNumber) {
   return zeroToInputArray
 }
 
+function ElementIncludesNumber(CurrentElement, number) {
+  const numberArray = CurrentElement.split("")
+  for (const currentElement of numberArray) {
+    if (currentElement === number) {
+      return true
+    }
+  }
+  return false
+}
+
+
+
+
+
+
