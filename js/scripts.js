@@ -1,6 +1,5 @@
 function inputGreaterThanZero(input) {
   const inputAsInt = Number(input);
-  //console.log(inputAsInt);
   if (inputAsInt > 0 ) {
     return true
   }
@@ -13,19 +12,15 @@ function arrayZeroToInput(input) {
   let zeroToInputArray = [];
   for (let i = 0; i <= inputAsInt; i++) {
     let iAsString = i.toString();
-    //console.log(iAsString);
     zeroToInputArray.push(iAsString);
   }
-  //console.log(zeroToInputArray);
   return zeroToInputArray
 }
 
 //See if a number(string) contains another number(character) in it's digits 
 function ChecksIfElementIncludesNumber(currentElement, number) {
   const numberArray = currentElement.split("");
-  //console.log(numberArray);
   for (const Element of numberArray) {
-    //console.log(Element);
     if (Element === number) {
       return true
     }
@@ -37,7 +32,6 @@ function ChecksIfElementIncludesNumber(currentElement, number) {
 function replacesElements(zeroToInputArray) {
   const finalArray = zeroToInputArray.map(function(element) {
     if (ChecksIfElementIncludesNumber(element, "3")) {
-      //console.log(element);
       return "Won't you be my neighbor?"
     } else if (ChecksIfElementIncludesNumber(element, "2")) {
       return "Boop!";
@@ -49,20 +43,7 @@ function replacesElements(zeroToInputArray) {
   });
   return finalArray;
 }
-
-
-//console.log(inputGreaterThanZero(10));
-//console.log(arrayZeroToInput(10));
-//console.log(ChecksIfElementIncludesNumber("0", "0"));
-//console.log(replacesElements(["1", "2", "3", "4", "5", "6"]));
-
-// let numAsString = 14;
-// num = numAsString.toString();
-// console.log(num);
-// console.log(numAsString);
-
-
-
+//checks if user input was a number greater than 0 and returns array from 0 to input with elements replaced based on elements digits.  
 function mainfunction(input) {
   if (inputGreaterThanZero(input)) {
     return replacesElements(arrayZeroToInput(input));
@@ -75,13 +56,14 @@ function mainfunction(input) {
 
 
 
-
-
-
-let test = mainfunction("k");
-
-console.log(test);
-
+$(document).ready(function() {
+  $("form#side").submit(function(event) {
+    event.preventDefault();
+    const input = $("#side1").val();
+    let result = mainfunction(input);
+    $("#output").text(result);    
+  });
+});
 
 
 
