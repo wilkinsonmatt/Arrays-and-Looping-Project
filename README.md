@@ -1,13 +1,11 @@
-# Portfolio
+# Loop/Array Project
 
 #### By Matt Wilkinson
 
 #### Programming Language Suggester
 ---
 ## Github links
-* https://wilkinsonmatt.github.io/Programming_Language_Suggester/
-* https://wilkinsonmatt.github.io/Programming_Language_Suggester/
-* https://github.com/wilkinsonmatt/Programming_Language_Suggester.git
+* https://github.com/wilkinsonmatt/Arrays-and-Looping-Project.git
 ---
 ## Technologies Used :
 
@@ -24,7 +22,7 @@
 ---
 ## Tests :
 
-* ### Describe: inputGreaterThanZero()
+* ### Describe: inputGreaterThanZero(input)
   >Test: "It should check if user entered a number greater than zero"
   >
   >Code: 
@@ -35,7 +33,7 @@
   >
   >Expected Output: true
 
-* ### Describe: arrayZeroToInput()
+* ### Describe: arrayZeroToInput(input)
   >Test: "It should return an array of numbers(characters) from 0 to the user's inputted number"
   >
   >Code:` arrayZeroToInput(5);`
@@ -49,7 +47,7 @@
   >
   >Expected Output: true
 
-* ### Describe: replacesElements()
+* ### Describe: replacesElements(zeroToInputArray)
   > Test: "It should return an array that replaced any element of an array with one of the following strings based on a hierarchy:
   >- 1st - Elements with 3 in it's digits are replaced "Won't you be my neighbor?"
   >- 2nd - Elements with 2 in it's digits are replaced "Boop!"
