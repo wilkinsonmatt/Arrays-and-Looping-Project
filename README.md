@@ -19,51 +19,40 @@
 
 ## Description
 
- A Programming Language Suggester webpage that asks future students a series of questions about themselves and provides a language suggestion based on their answers. 
+ A program that takes a number from the user and displays the numbers 0 to users number. The numbers that have 1, 2, or 3 it their digits with be replaced with words instead. First numbers with any 3s will be replaced with "Won't you be my neighbor?". Leftover numbers with any 2s will be replaced with "Boop!". Finally numbers with 1s will be replaced will "Beep!". 
  
- (Unfortunately the results aren't based in science)
 
 ## Tests
 
 Describe: inputGreaterThanZero()
-
-  Test: "It should check if user entered a whole number greater than zero"
+  Test: "It should check if user entered a number greater than zero"
   Code: const input = 1123; 
         inputGreaterThanZero(input);
   Expected Output: true 
 
 Describe: arrayZeroToInput()
-
-  Test: "It should return an array of numbers from 0 to the user's inputted number"
+  Test: "It should return an array of numbers(characters) from 0 to the user's inputted number"
   Code: arrayZeroToInput(5);
-  Expected Output: [0, 1, 2, 3, 4, 5]
+  Expected Output: ["0", "1", "2", "3", "4", "5"]
 
-Describe: Beep!()
+Describe: ChecksIfElementIncludesNumber(currentElement, number)
+  Test: "It should tell if the current element(string) has a given number(character) within it's digits.
+  Code: ChecksIfElementIncludesNumber("1832349", "4")
+  Expected Output: true
 
-  Test: "It should return an array that replaced any element of the input array that contains a 1 within it's digits with "Beep!""
-  Code: Beep!([0, 1, 12, 31, 8, 123]);
-  Expected Output: [0, Beep!, Beep!, Beep!, 8, Beep!]
+Describe: replacesElements()
+  Test: "It should return an array that replaced any element of an array with one of the following strings based on a hierarchy: 
+          1st - Elements with 3 in it's digits are replaced "Won't you be my neighbor?"
+          2nd - Elements with 2 in it's digits are replaced "Boop!"
+          3rd - Elements with 1 in it's digits are replaced "Beep!""
+  Code: replacesElements(["0", "1", "12", "31", "8", "123"]);
+  Expected Output: ["0", "Beep!", "Boop!", "Won't you be my neighbor?", "8", "Won't you be my neighbor?"]
 
-Describe: Boop!()
+Describe: mainfunction(input)
+  Test: "It should use the other functions to return an array based on the users input, or tell them to try again. The numbers, represented as characters, from 0 to inputted number will be the elements of the array. Elements will be replaced words if their they have 3, 2, or 1 in their digits.
+  code: mainfunction("13")
 
-  Test: "It should return an array that replaced any element of an array that contains a 2 within it's digits with "Boop!""
-  Code: Beep!([0, 1, 12, 31, 8, 123]);
-  Expected Output: [0, Boop!, 31, 8, Boop!]
-
-Describe: neighbor()
-
-  Test: "It should return an array that replaced any element of an array that contains a 3 within it's digits with "Won't you be my neighbor?""
-  Code: Beep!([0, 1, 12, 31, 8, 123]);
-  Expected Output: [0, 1, "Won't you be my neighbor?", 8, "Won't you be my neighbor?"]
-
-Describe: Mr._Roboger's_Neighborhood()
-
-  Test: It should return an array that replaced any element of an array with one of the following strings based on a hierarchy: 
-          1st - Elements with 3 it's digits are replaced "Won't you be my neighbor?"
-          2nd - Elements with 2 it's digits are replaced "Boop!"
-          3rd - Elements with 1 it's digits are replaced "Beep!"
-  Code: Mr._Roboger's_Neighborhood([0, 1, 12, 31, 8, 123]);
-  Expected Output: [0, Beep!, Boop!, Won't you be my neighbor, 8, Won't you be my neighbor]
+  Expected Output:["0","Beep!","Boop!","Won't you be my neighbor?","4","5","6","7","8","9","Beep!","Beep!","Boop!","Won't you be my neighbor?"]
 
 ## Setup/Installation Requirements
 
