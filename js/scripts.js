@@ -52,7 +52,6 @@ function mainfunction(input) {
   }
 }
 
-
 $(document).ready(function() {
   $("form#side").submit(function(event) {
     event.preventDefault();
